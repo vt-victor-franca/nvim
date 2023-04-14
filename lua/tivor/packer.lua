@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use "steelsojka/pears.nvim"
 
     use({
         'rose-pine/neovim',
@@ -16,8 +17,15 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
-
+    use { 'tpope/vim-commentary' }
+    use { 'junegunn/fzf.vim' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
     use("nvim-treesitter/playground")
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");

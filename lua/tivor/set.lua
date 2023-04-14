@@ -44,4 +44,6 @@ function go_org_imports(wait_ms)
 end
 
 vim.cmd([[autocmd BufWritePre *.go lua go_org_imports()]])
+vim.cmd([[let g:go_def_mapping_enabled = 0]])
+vim.cmd([[let g:nvim_tree_respect_buf_cwd = 1]])
 
