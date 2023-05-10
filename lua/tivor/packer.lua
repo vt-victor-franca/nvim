@@ -2,6 +2,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'Shatur/neovim-session-manager'
+    use 'ThePrimeagen/harpoon'
+    use 'nvim-lua/plenary.nvim'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -9,6 +11,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use "steelsojka/pears.nvim"
+    use 'ThePrimeagen/git-worktree.nvim'
+    use 'catppuccin/nvim'
 
     use({
         'rose-pine/neovim',
@@ -34,6 +38,7 @@ return require('packer').startup(function(use)
         require('bufferline').setup()
     end
     }
+    use("nvim-tree/nvim-web-devicons")
     use { "akinsho/toggleterm.nvim", tag = '*' }
     use {
         'lewis6991/gitsigns.nvim',
@@ -63,5 +68,4 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-
 end)

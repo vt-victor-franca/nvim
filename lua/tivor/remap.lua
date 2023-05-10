@@ -25,7 +25,7 @@ vim.keymap.set("x", "<leader>rc", [[:s///gc<Left><Left><Left>]])
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>")
 vim.keymap.set("n", "<C-s>", ":w<cr>")
 
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>")
 
 vim.keymap.set("n", "<Tab>", ":bn<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bp<CR>")
