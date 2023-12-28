@@ -1,5 +1,6 @@
 require("tivor.set")
 require("tivor.remap")
+require("tivor.lazy")
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

@@ -5,7 +5,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "<C-s>", ":w<cr>")
 vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<C-q>", ":q!<CR>")
 vim.keymap.set("n", "<Tab>", ":bn<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bp<CR>")
 
@@ -13,7 +12,7 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>gb", "<cmd>Git blame<cr>")
 vim.keymap.set("n", "<leader>nh", ":noh<cr>")
 
-vim.keymap.set("n", "<C-w>", ":bp|bd#<CR>")
+vim.keymap.set("n", "<C-q>", ":bp|bd#<CR>")
 vim.keymap.set("n", "fda", ":%bd!|e#<CR>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -35,11 +34,12 @@ vim.keymap.set("x", "<leader>r", [[:s///g<Left><Left>]])
 vim.keymap.set("x", "<leader>rc", [[:s///gc<Left><Left><Left>]])
 
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>")
+vim.keymap.set("i", "<leader>c", "<Plug>(copilot-suggest)")
+vim.keymap.set("i", "<C-c>", "<Plug>(copilot-next)")
 
-vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
-  pattern = "*",
-  callback = function()
-    vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
-  end,
+vim.api.nvim_create_autocmd("CursorHold", {
+    pattern = "*",
+    callback = function()
+        vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
+    end,
 })
-
