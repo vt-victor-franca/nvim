@@ -51,11 +51,5 @@ return {
         { 'L3MON4D3/LuaSnip' },
         { 'rafamadriz/friendly-snippets' },
     }
-},
-{ "stevearc/conform.nvim",
-event = { "BufReadPre", "BufNewFile" },
-config = function()
-end,
 }
-
 }

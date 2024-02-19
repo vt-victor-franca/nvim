@@ -34,8 +34,6 @@ vim.keymap.set("x", "<leader>r", [[:s///g<Left><Left>]])
 vim.keymap.set("x", "<leader>rc", [[:s///gc<Left><Left><Left>]])
 
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>")
-vim.keymap.set("i", "<leader>c", "<Plug>(copilot-suggest)")
-vim.keymap.set("i", "<C-c>", "<Plug>(copilot-next)")
 
 vim.api.nvim_create_autocmd("CursorHold", {
     pattern = "*",
