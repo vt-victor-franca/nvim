@@ -13,6 +13,13 @@ function ColorMyPencils(color)
     -- ]])
 
     color = color or "rose-pine"
+    -- vim.cmd([[highlight Normal guibg=black]])
+    vim.cmd([[
+    augroup MyColors
+    autocmd!
+    autocmd ColorScheme * highlight Search guifg=NONE guibg=#333333 gui=NONE
+    augroup end
+    ]])
     vim.cmd.colorscheme(color)
 end
 
