@@ -35,9 +35,9 @@ vim.keymap.set("x", "<leader>rc", [[:s///gc<Left><Left><Left>]])
 
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>")
 
-vim.api.nvim_create_autocmd("CursorHold", {
-    pattern = "*",
-    callback = function()
-        vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
-    end,
-})
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--     pattern = "*",
+--     callback = function()
+--         vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
+--     end,
+-- })

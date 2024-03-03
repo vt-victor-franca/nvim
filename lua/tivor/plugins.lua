@@ -5,6 +5,7 @@ return {
     'nvim-lua/plenary.nvim',
     'sainnhe/gruvbox-material',
     'rose-pine/neovim',
+    'RRethy/vim-illuminate',
 
     {
         'nvim-telescope/telescope.nvim', version = '0.1.2',
