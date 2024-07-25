@@ -5,7 +5,6 @@ return {
     'nvim-lua/plenary.nvim',
     'sainnhe/gruvbox-material',
     'rose-pine/neovim',
-    'RRethy/vim-illuminate',
 
     {
         'nvim-telescope/telescope.nvim', version = '0.1.2',
@@ -25,7 +24,7 @@ return {
     "tpope/vim-fugitive",
     "nvim-treesitter/nvim-treesitter-context",
     "nvim-tree/nvim-tree.lua",
-    { 'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons', config = function()
+    { 'akinsho/bufferline.nvim', version = "v4.*", dependencies = 'nvim-tree/nvim-web-devicons', config = function()
         require('bufferline').setup()
     end
 },

@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("n", "<C-h>", ":ToggleTerm direction=vertical size=80<CR>")
+vim.keymap.set("n", "<A-h>", ":ToggleTerm direction=horizontal size=30<CR>")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -28,16 +31,15 @@ vim.keymap.set({ "n", "v" }, "y", [["+y]])
 vim.keymap.set({ "n", "v" }, "Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set("x", "<C-t>", ":ToggleTerm")
 vim.keymap.set("x", "p", [["_dP]])
 vim.keymap.set("x", "<leader>r", [[:s///g<Left><Left>]])
 vim.keymap.set("x", "<leader>rc", [[:s///gc<Left><Left><Left>]])
 
 vim.keymap.set("i", "<C-s>", "<esc>:w<cr>")
 
--- vim.api.nvim_create_autocmd("CursorHold", {
---     pattern = "*",
---     callback = function()
---         vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
---     end,
--- })
+vim.api.nvim_create_autocmd("CursorHold", {
+    pattern = "*",
+    callback = function()
+        vim.cmd([[exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/']])
+    end,
+})
